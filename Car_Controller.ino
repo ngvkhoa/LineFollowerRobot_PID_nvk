@@ -19,12 +19,12 @@ int sensorMax[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 // ==========================================================
 // --- PID PARAMETERS & KINEMATIC LIMITS ---
 // ==========================================================
-float Kp = 0.10; 
+float Kp = 0.15;
 float Ki = 0.00; 
-float Kd = 2.50;
+float Kd = 2.9;
 
 // Speed Control Variables
-int targetBaseSpeed = 200;   // Maximum straight-line speed
+int targetBaseSpeed = 215;   // Maximum straight-line speed
 int maxSpeed = 255;          // Absolute PWM limit
 float currentBaseSpeed = 0;  // Dynamic speed variable for Soft-Start
 float accelerationRate = 0.3;// Rate of speed increase (Lower = slower ramp-up)
@@ -40,7 +40,7 @@ void setup() {
   
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   Serial.begin(9600);
-
+  beep(1);
   // 2. Auto-Calibration Phase (5 Seconds)
   waitButtonPress(); beep(2);
   digitalWrite(LED_PIN, HIGH);
@@ -197,7 +197,7 @@ void beep(int times) {
   for (int i = 0; i < times; i++) {
     digitalWrite(BUZZER_PIN, HIGH); 
     digitalWrite(LED_PIN, HIGH);    // Sync LED ON with buzzer
-    delay(30);
+    delay(50);
     digitalWrite(BUZZER_PIN, LOW);  
     digitalWrite(LED_PIN, LOW);     // Sync LED OFF with buzzer
     delay(100);
