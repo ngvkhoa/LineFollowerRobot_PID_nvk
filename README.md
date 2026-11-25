@@ -2,6 +2,9 @@
 
 This repository contains the Arduino source code and hardware documentation for a custom-built, high-speed line following robot. The system utilizes a Proportional-Integral-Derivative (PID) control algorithm for smooth and aggressive track navigation.
 
+<video src="./videos/demo.mp4" controls width="100%">
+</video>
+
  🌟 Key Features
 * Custom PID Algorithm: Highly tuned Proportional and Derivative control for rapid error correction without oscillations.
 * Auto-Calibration Mode: A 5-second dynamic scanning phase that automatically normalizes the white/black reflectance thresholds based on environmental lighting.
