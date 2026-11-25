@@ -2,7 +2,8 @@
 
 This repository contains the Arduino source code and hardware documentation for a custom-built, high-speed line following robot. The system utilizes a Proportional-Integral-Derivative (PID) control algorithm for smooth and aggressive track navigation.
 
-<video src="./videos/demo.mp4" controls width="100%">
+<video width="100%" controls>
+  <source src="https://github.com/ngvkhoa/LineFollowerRobot_PID_nvk/raw/refs/heads/main/videos/demo.mp4" type="video/mp4">
 </video>
 
  🌟 Key Features
